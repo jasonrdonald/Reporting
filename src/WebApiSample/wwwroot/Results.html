@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <title>AB Testing Results</title>
 
-    
+
 
     <link rel="stylesheet" type="text/css" href="css/normalize.css">
     <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
@@ -64,26 +64,6 @@
                     <th>Conversion Rate</th>
                     <th>Region</th>
                 </tr>
-                <tr class="active">
-                    <td>iPhone 6s Launch</td>
-                    <td>1</td>
-                    <td>Facebook</td>
-                    <td>1250</td>
-                    <td>850</td>
-                    <td>75</td>
-                    <td>6%</td>
-                    <td>California</td>
-                </tr>
-                <tr class="warning">
-                    <td>Google Nexus</td>
-                    <td>2</td>
-                    <td>Email</td>
-                    <td>5220</td>
-                    <td>1285</td>
-                    <td>120</td>
-                    <td>2%</td>
-                    <td>New York</td>
-                </tr>
             </thead>
             <tbody></tbody>
         </table>
@@ -95,9 +75,14 @@
 <script type="text/javascript" src="js/eon.js"></script>
 <script type="text/javascript" src="js/spline.js"></script>
 <script>
-    $(document).ready(function () {
-        //alert('success');
-        //renderABresults('results');
+    $(document).ready(function () {    
+        Getdata();
+        setInterval(Getdata, 3000);
+    });
+
+
+    function Getdata() {
+
         $.ajax({
             type: "get",
             dataType: "json",
@@ -108,19 +93,19 @@
                 renderABresults(msg);
             },
             error: function (x, e) {
-                alert('Results::Failed' + '::' + x.responseText + '::' + x.status);
+                //   alert('Results::Failed' + '::' + x.responseText + '::' + x.status);
             }
         });
 
-        function renderABresults(results)
-        {
+
+        function renderABresults(results) {
             $('#tblResults tr.active, tr.warning').remove();
 
             $.each(results, function (i, obj) {
 
-                var region=["California","New York","Texas"];
+                var region = ["California", "New York", "Texas"];
                 var zebracolor = (i % 2 == 0) ? "active" : "warning";
-                $('#tblResults').append('<tr class=" ' + zebracolor + '" id='+ results[i].ID +'>'
+                $('#tblResults').append('<tr class=" ' + zebracolor + '" id=' + results[i].ID + '>'
                     + '<td class="Product">' + results[i].Make + ' ' + results[i].Model + ' ' + results[i].Color + '</td>'
                     + '<td class="Promo">' + results[i].ID + '</td>'
                     + '<td class="PromoChannel">' + results[i].Promo + '</td>'
@@ -128,11 +113,13 @@
                     + '<td class="ProductViews">' + results[i].Views + '</td>'
                     + '<td class="TotalPurchase">' + results[i].TotalNoOfPurchases + '</td>'
                     + '<td class="ConversionRate">' + Math.round(((results[i].TotalNoOfPurchases / results[i].Views) * 100)) + '% </td>'
-                    + '<td class="Region">'+region[i]+'</td>'
+                    + '<td class="Region">' + region[i] + '</td>'
                     + '</tr>');
             });
         }
-    });
+
+    }
+
 </script>
 
 <script src="js/owl.carousel.js"></script>

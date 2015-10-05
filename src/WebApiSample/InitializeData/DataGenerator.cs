@@ -59,7 +59,7 @@ namespace WebApiSample.InitializeData
             lt2.OfferPrice = "$190.0";
             lt2.Views = 80;
             lt2.TotalNoOfPurchases = 10;
-            lt1.Promo = "YT";
+            lt2.Promo = "YT";
             lt2.Description = "Details.";
             lstProd.Add(lt2);
 

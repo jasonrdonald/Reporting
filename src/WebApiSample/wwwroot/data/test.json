@@ -1,0 +1,59 @@
+1. Real-time spline
+[
+	{
+	
+    "adid":1,
+    "hits":10,
+  }	,
+  {
+    "adid":2,
+    "hits":15,
+  }	,
+  {
+    "adid":3,
+    "hits":25,
+  }	
+]
+
+2. Bar Chart
+
+[
+  {
+    "adid":1,
+	"agegroup":1,
+	"region":"CA",
+    "hits":10,
+  }	,
+  {
+    "adid":2,
+	"agegroup":3,
+	"region":"NY",
+    "hits":15,
+  }	,
+  {
+    "adid":3,
+	"agegroup":2,
+	"region":"FL",
+    "hits":25,
+  }	
+]
+
+3. Region Map Chart
+
+[
+  {
+    "adid":1,
+	"region":"CA",
+    "hits":10,
+  },
+  {
+    "adid":2,
+	"region":"NY",
+    "hits":15,
+  },
+  {
+    "adid":3,
+	"region":"FL",
+    "hits":25,
+  }
+]

@@ -1,0 +1,1 @@
+C:\Users\jason\.dnx\runtimes\dnx-clr-win-x86.1.0.0-beta7\bin\dnx kestrel

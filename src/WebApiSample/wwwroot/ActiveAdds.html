@@ -1,0 +1,246 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Active Ads</title>
+    <script src="js/jquery.min.js"></script>
+    <link href="css/menustyles.css" rel="stylesheet" type="text/css" />
+    <script src="Scripts/script.js" type="text/javascript"></script>
+    <style>
+        #views {
+            font: 13px Arial;
+            text-align: center;
+            overflow: hidden;
+        }
+
+            #views div {
+                width: auto;
+                text-align: left;
+                margin: 1px;
+                padding: 2px 5px;
+                letter-spacing: 1px;
+            }
+
+        div.floatleft {
+            float: left;
+        }
+
+        img.image {
+            height: 140px;
+            width: 220px;
+        }
+
+        .box {
+            border: 1px solid #808080;
+            padding: 5px 5px;
+            margin: 5px 5px;
+            cursor: pointer;
+        }
+
+        a {
+            text-decoration: underline;
+            cursor: pointer;
+        }
+
+        #dvProds {
+            align-content: center;
+            margin-left: 280px;
+        }
+
+        img.thbImg {
+            height: 220px;
+            width: 242px;
+        }
+    </style>
+
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="css/owl.css">
+    <link rel="stylesheet" type="text/css" href="css/animate.css">
+    <link href="font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="css/et-icons.css">
+    <link rel="stylesheet" type="text/css" href="css/tooltip.css">
+    <link rel="stylesheet" type="text/css" href="css/lightbox.css">
+    <link id="main" rel="stylesheet" type="text/css" href="css/publisher.css">
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div id='cssmenu'>
+            <ul>
+                <li><a href='home.html'><span>Home</span></a></li>
+                <li class='has-sub'>
+                    <a href='CreateAdd.html'><span>Admin</span></a>
+                    <ul>
+                        <li><a href='CreateAdd.html'><span>Create a Tracker</span></a> </li>
+                        <li><a href='ActiveAdds.html'><span>Active Trackers</span></a> </li>
+                    </ul>
+                </li>
+                <li><a href='Products.html'><span>Products</span></a></li>
+                <li><a href='Reporting.html'><span>Dashboard</span></a></li>
+                <li><a href='Results.html'><span>A/B Testing Results</span></a></li>
+            </ul>
+        </div>
+        <div class="panel panel-default">
+            <div>
+                <img src="images/Verizons_new_logo.jpg" width="200px" />
+                <div style="float:right;color:cadetblue;  padding-right:100px"><h1 style="font-weight:bold;">VERSUS</h1></div>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                Admin > Active Trackers
+            </div>
+        </div>
+        <div class="container">
+            <div class="panel panel-primary">
+                <div class="panel-heading">Twitter</div>
+                <div class="panel-body">
+                    <img src="images/Twitter.jpg" />
+
+                    <div id="tblActiveAdds"></div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="panel panel-primary">
+                <div class="panel-heading">Facebook</div>
+                <div class="panel-body">
+                    <img src="images/Facebook.jpg" />
+
+                    <div id="tblActiveAddsFacebook"></div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="panel panel-primary">
+                <div class="panel-heading">You Tube</div>
+                <div class="panel-body">
+                    <img src="images/Youtube.jpg" />
+
+                    <div id="tblActiveAddsYouTube"></div>
+                </div>
+            </div>
+        </div>
+
+    </form>
+</body>
+<script>
+
+
+    function getData() {
+        $.ajax({
+            type: 'GET',
+            url: 'api/values/getUrlNames',
+            async: true,
+            cache: false,
+            success: function (msg) {
+                PopulatAdds(msg);
+            },
+            error: function (a, b, c) {
+
+            }
+        });
+    }
+
+    function PopulatAdds(msg) {
+
+        $("#tblActiveAdds").empty();
+        $.each(msg, function (i, obj) {
+
+            // var details = msg[i].Make + "<br/>" + msg[i].Model + "<br/>" + msg[i].Color + "<br/>" + msg[i].Specs + "<br/>";
+            var details = msg[i].ID + "--" + msg[i].AgeGroup + "--" + msg[i].Gender + "--" + msg[i].Region;
+
+            //$("#tblActiveAdds").append(
+            //    "<tr>" +
+            //   " <td><img class='img' src='" + msg[i].ImageURL + "' data-view-name='" + details + "'></img></td></tr>"
+
+
+            // );
+            $("#tblActiveAdds").append(
+               //"<tr>" +
+
+              "<div class='floatleft box'>" + msg[i].AddDesc + "<br/><img class='img' src='" + msg[i].ImageURL + "' data-view-name='" + details + "'></img><br/>Click Here for Details:<br/></a></div>"
+             // "<tr><td>" + details + "</td></tr>"+
+              //</tr>"
+            );
+        });
+
+        $.each(msg, function (i, obj) {
+            // var details = msg[i].Make + "<br/>" + msg[i].Model + "<br/>" + msg[i].Color + "<br/>" + msg[i].Specs + "<br/>";
+            var details = msg[i].ID + "--" + msg[i].AgeGroup + "--" + msg[i].Gender + "--" + msg[i].Region;
+            $("#tblActiveAddsFacebook").append(
+                 "<div class='floatleft box'>" + msg[i].AddDesc + "<br/><img class='img' src='" + msg[i].ImageURL + "' data-view-name='" + details + "'></img><br/>Click Here for Details: <br/></a></div>"
+
+
+             );
+        });
+
+        $.each(msg, function (i, obj) {
+            // var details = msg[i].Make + "<br/>" + msg[i].Model + "<br/>" + msg[i].Color + "<br/>" + msg[i].Specs + "<br/>";
+            var details = msg[i].ID + "--" + msg[i].AgeGroup + "--" + msg[i].Gender + "--" + msg[i].Region;
+            $("#tblActiveAddsYouTube").append(
+                 "<div class='floatleft box'>" + msg[i].AddDesc + "<br/><img class='img' src='" + msg[i].ImageURL + "' data-view-name='" + details + "'></img><br/>Click Here for Details: <br/></a></div>"
+
+
+             );
+        });
+    }
+
+    $(document).ready(function () {
+
+        getData();
+
+        $(document).on('click', '.img', function () {
+            var viewName = $(this).attr("data-view-name");
+
+            var arr = viewName.split('--');
+
+            var AgeGroup = arr[1];
+            var Gender = arr[2];;
+            var Region = arr[3];
+            var ID = arr[0];
+
+            var data = {
+                AgeGroup: AgeGroup,
+                Gender: Gender,
+                Region: Region,
+                ID: ID
+            }
+
+            $.ajax({
+                type: "get",
+                async: true,
+                cache: false,
+                data: data,
+                url: "api/values/IncreaseAddClicks/" + ID,
+                success: function (msg) {
+                    window.location.replace("products.html");
+
+                },
+                error: function (x, e) {
+                    /*
+                                        alert('Failed');
+                                        alert(x.responseText);
+                                        alert(x.status);*/
+                }
+            });
+
+
+        });
+
+    });
+
+</script>
+
+
+<script src="js/owl.carousel.js"></script>
+<script src="js/lightbox.min.js"></script>
+<script src="js/wow.min.js"></script>
+<script src="js/jquery.onepagenav.js"></script>
+<script src="js/core.js"></script>
+<script src="js/tooltip.js"></script>
+<script src="js/jquery.form-validator.js"></script>
+<script src="js/preloader.js"></script>
+<script src="js/main.js"></script>
+<script src="js/bootstrap.min.js"></script>
+</html>

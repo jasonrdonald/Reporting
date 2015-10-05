@@ -1,0 +1,613 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<head>
+    <title>Product Details</title>
+    <script src="js/jquery.min.js"></script>
+    <style>
+        #views {
+            font: 13px Arial;
+            width: 500px;
+            text-align: center;
+            overflow: hidden;
+        }
+
+            #views div {
+                width: auto;
+                text-align: left;
+                margin: 1px;
+                padding: 2px 5px;
+                letter-spacing: 1px;
+            }
+
+        img.image {
+            height: 250px;
+            width: 400px;
+        }
+
+        .box {
+            border: 1px solid #808080;
+            padding: 5px 5px;
+            margin: 5px 5px;
+        }
+
+        #tblProductDetails {
+            align-content: center;
+            margin-left: 400px;
+        }
+
+        .productSpecs {
+            height: 490px;
+            overflow-y: scroll;
+        }
+
+        .btn-grey {
+            background-color: #D6D6D6 !important;
+            color: black !important;
+            border-color: #D6D6D6 !important;
+        }
+
+        .panel-border {
+            border-color: #D6D6D6 !important;
+        }
+    </style>
+    <link href="css/menustyles.css" rel="stylesheet" type="text/css" />
+    <script src="Scripts/script.js" type="text/javascript"></script>
+
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="css/owl.css">
+    <link rel="stylesheet" type="text/css" href="css/animate.css">
+    <link href="font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="css/et-icons.css">
+    <link rel="stylesheet" type="text/css" href="css/tooltip.css">
+    <link rel="stylesheet" type="text/css" href="css/lightbox.css">
+    <link id="main" rel="stylesheet" type="text/css" href="css/publisher.css">
+    <script src="scripts/bootstrap.js"></script>
+    <script src="scripts/bootstrap.min.js"></script>
+    <link href="css/bootstrap.css" rel="stylesheet" />
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div id='cssmenu'>
+            <ul>
+                <li><a href='home.html'><span>Home</span></a></li>
+                <li class='has-sub'>
+                    <a href='CreateAdd.html'><span>Admin</span></a>
+                    <ul>
+                        <li><a href='CreateAdd.html'><span>Create a Tracker</span></a> </li>
+                        <li><a href='ActiveAdds.html'><span>Active Trackers</span></a> </li>
+                    </ul>
+                </li>
+                <li><a href='Products.html'><span>Products</span></a></li>
+                <li><a href='Reporting.html'><span>Dashboard</span></a></li>
+                <li><a href='Results.html'><span>A/B Testing Results</span></a></li>
+            </ul>
+        </div>
+        <div class="panel panel-default">
+            <div>
+                <img src="images/Verizons_new_logo.jpg" width="200px" />
+                <div style="float:right;color:cadetblue;  padding-right:100px"><h1 style="font-weight:bold;">VERSUS</h1></div>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                Products > Product Details
+            </div>
+        </div>
+        <div id="views" class="container">
+        </div>
+        <div class="box panel panel-primary" style="display:none">
+            <table id="tblProductDetails" style="display:none"></table>
+        </div>
+        <div class="container">
+            <div class="row panel panel-primary panel-border">
+
+
+                <div class="col-xs-12 col-sm-4 col-md-6 ">
+                    <h2>iPhone 6s</h2>
+                    <img src="images/iphone6s-gallery1-2015.jpg" />
+                </div>
+                <div class="col-xs-12 col-sm-4 col-md-6 tab-content">
+                    <ul class="nav nav-tabs" role="tablist">
+                        <li role="presentation" class="active"><a href="#model" aria-controls="model" role="tab" data-toggle="tab">Buy</a></li>
+                        <li role="presentation"><a href="#specs" aria-controls="specs" role="tab" data-toggle="tab">Specifications</a></li>
+                    </ul>
+                    <div class="box panel panel-primary panel-border tab-pane active" role="tabpanel" id="model">
+                        <a href="#" style="float:right" class='btnback'>Click Here for more offers</a>
+                        <h2>Model</h2>
+
+                        <h4>iPhone 6s 4.7-inch display</h4>
+                        <h4>From $649</h4><h5>$32.45/mo. with annual upgrade</h5>
+                        <input type='button' value='Buy' class='btn btn-primary btn-grey' style="width:100px;" data-view-name='' title='Click here to buy' />
+                        <div style="float:right"></div>
+
+                    </div>
+                    <div role="tabpanel" class="tab-pane" id="specs">
+                        <h3 class="sectionTitle">
+                            Apple iPhone 6 (Space Grey, 16 GB)
+                        </h3>
+                        <div class="productSpecs specSection">
+
+                            <table class="specTable table table-striped table-bordered" cellspacing="0">
+                                <tbody>
+                                    <tr>
+                                        <th class="groupHead" colspan="2">GENERAL FEATURES</th>
+                                    </tr>
+                                    <tr>
+                                        <td class="specsKey">Brand</td>
+                                        <td class="specsValue">
+                                            Apple
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="specsKey">Model Name</td>
+                                        <td class="specsValue">
+                                            iPhone 6
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="specsKey">Model ID</td>
+                                        <td class="specsValue">
+                                            A1586
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="specsKey">Form</td>
+                                        <td class="specsValue">
+                                            Bar
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="specsKey">SIM Size</td>
+                                        <td class="specsValue">
+                                            Nano SIM
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="specsKey">SIM Type</td>
+                                        <td class="specsValue">
+                                            Single Sim, GSM
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="specsKey">Touch Screen</td>
+                                        <td class="specsValue">
+                                            Yes
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="specsKey">Business Features</td>
+                                        <td class="specsValue">
+                                            Document Viewer, Microsoft Word, Microsoft Excel, Microsoft PowerPoint, PDF, PPT, PPTX, XLS, XLSX, TXT, DOC, DOCX
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="specsKey">Call Features</td>
+                                        <td class="specsValue">
+                                            Loudspeaker
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="specsKey">Handset Color</td>
+                                        <td class="specsValue">
+                                            Space Grey
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <table class="specTable table table-striped table-bordered" cellspacing="0">
+                                <tbody>
+                                    <tr>
+                                        <th class="groupHead" colspan="2">Platform</th>
+                                    </tr>
+                                    <tr>
+                                        <td class="specsKey">Operating Freq</td>
+                                        <td class="specsValue">
+                                            GSM - 850, 900, 1800, 1900; UMTS - 1700, 2100; LTE - 700, 2300, 2500, 2600
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="specsKey">OS</td>
+                                        <td class="specsValue">
+                                            iOS v8
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="specsKey">Processor</td>
+                                        <td class="specsValue">
+                                            A8 Chip with 64-bit Architecture and M8 Motion Co-processor
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <table class="specTable table table-striped table-bordered" cellspacing="0">
+                                <tbody>
+                                    <tr>
+                                        <th class="groupHead" colspan="2">Display</th>
+                                    </tr>
+                                    <tr>
+                                        <td class="specsKey">Size</td>
+                                        <td class="specsValue">
+                                            4.7 inch
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="specsKey">Resolution</td>
+                                        <td class="specsValue">
+                                            1334 x 750 Pixels
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="specsKey">Other Display Features</td>
+                                        <td class="specsValue">
+                                            Multi-touch, IPS Display, Wide-angle Viewing, LED Backlit Wide Screen, 500 cd / m2 Maximum Brightness, Finger Print Resistant Oleophobic Coating on Front, Full sRGB Standard, Display Zoom, Dual-domain Pixels, Reachability
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <table class="specTable table table-striped table-bordered" cellspacing="0">
+                                <tbody>
+                                    <tr>
+                                        <th class="groupHead" colspan="2">Camera</th>
+                                    </tr>
+                                    <tr>
+                                        <td class="specsKey">Rear Camera</td>
+                                        <td class="specsValue">
+                                            Yes, 8 MP
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="specsKey">Front Facing Camera</td>
+                                        <td class="specsValue">
+                                            Yes, 1.2 MP
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="specsKey">Video Recording</td>
+                                        <td class="specsValue">
+                                            Yes, 1920 x 1080
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="specsKey">HD Recording</td>
+                                        <td class="specsValue">
+                                            HD, Full HD
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="specsKey">Other Camera Features</td>
+                                        <td class="specsValue">
+                                            <div class="dummy-content">
+                                                iSight Camera, 1.5 Pixels, Auto Focus, Focus Pixels, f/2.2 Aperture, True Tone Flash, Five-element Lens, Hybrid IR Filter, Backside Illumination Sensor, Sapphire Crystal Lens Cover, Auto Image Stabilisation, Auto HDR for Photos, Improved Face Detection, Exposure Control, Panorama (Upto 43 MP), Burst...<a href="javascript:void(0);" onclick="$(this).parents('.dummy-content').hide();$(this).parents('.dummy-content').next().show();return false;">View More</a>
+                                            </div>
+                                            <div class="fk-hidden">iSight Camera, 1.5 Pixels, Auto Focus, Focus Pixels, f/2.2 Aperture, True Tone Flash, Five-element Lens, Hybrid IR Filter, Backside Illumination Sensor, Sapphire Crystal Lens Cover, Auto Image Stabilisation, Auto HDR for Photos, Improved Face Detection, Exposure Control, Panorama (Upto 43 MP), Burst Mode, Tap to Focus, Photo Geo-tagging, Timer Mode, Slow-motion Video: Shoot Video at 120 fps, Time-lapse Video, Cinematic Video Stabilisation, Continuous Auto Focus Video, Take Still Photos While Recording Video, Zoom - 3x, Video Geo-tagging</div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <table class="specTable table table-striped table-bordered" cellspacing="0">
+                                <tbody>
+                                    <tr>
+                                        <th class="groupHead" colspan="2">Dimensions</th>
+                                    </tr>
+                                    <tr>
+                                        <td class="specsKey">Size</td>
+                                        <td class="specsValue">
+                                            67x138.1x6.9 mm
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="specsKey">Weight</td>
+                                        <td class="specsValue">
+                                            129 g
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <table class="specTable table table-striped table-bordered" cellspacing="0">
+                                <tbody>
+                                    <tr>
+                                        <th class="groupHead" colspan="2">Battery</th>
+                                    </tr>
+                                    <tr>
+                                        <td class="specsKey">Type</td>
+                                        <td class="specsValue">
+                                            Li-Ion
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="specsKey">Talk Time</td>
+                                        <td class="specsValue">
+                                            14 hrs (3G)
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="specsKey">Standby Time</td>
+                                        <td class="specsValue">
+                                            250 hrs (2G)
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <table class="specTable table table-striped table-bordered" cellspacing="0">
+                                <tbody>
+                                    <tr>
+                                        <th class="groupHead" colspan="2">Memory and Storage</th>
+                                    </tr>
+                                    <tr>
+                                        <td class="specsKey">Internal</td>
+                                        <td class="specsValue">
+                                            16 GB
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <table class="specTable table table-striped table-bordered" cellspacing="0">
+                                <tbody>
+                                    <tr>
+                                        <th class="groupHead" colspan="2">Internet &amp; Connectivity</th>
+                                    </tr>
+                                    <tr>
+                                        <td class="specsKey">Internet Features</td>
+                                        <td class="specsValue">
+                                            Email
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="specsKey">Preinstalled Browser</td>
+                                        <td class="specsValue">
+                                            Safari
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="specsKey">GPRS</td>
+                                        <td class="specsValue">
+                                            Yes
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="specsKey">EDGE</td>
+                                        <td class="specsValue">
+                                            Yes
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="specsKey">3G</td>
+                                        <td class="specsValue">
+                                            Yes
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="specsKey">Wifi</td>
+                                        <td class="specsValue">
+                                            Yes, 802.11 a/b/g/n/ac
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="specsKey">USB Connectivity</td>
+                                        <td class="specsValue">
+                                            Yes
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="specsKey">Navigation Technology</td>
+                                        <td class="specsValue">
+                                            A-GPS, GLONASS, with Google Maps
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="specsKey">Bluetooth</td>
+                                        <td class="specsValue">
+                                            Yes, v4
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="specsKey">Audio Jack</td>
+                                        <td class="specsValue">
+                                            3.5 mm
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="specsKey">Charging Point</td>
+                                        <td class="specsValue">
+                                            Charging via USB to Computer System or Power Adapter
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="specsKey">NFC</td>
+                                        <td class="specsValue">
+                                            Yes
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <table class="specTable table table-striped table-bordered" cellspacing="0">
+                                <tbody>
+                                    <tr>
+                                        <th class="groupHead" colspan="2">Multimedia</th>
+                                    </tr>
+                                    <tr>
+                                        <td class="specsKey">Music Player</td>
+                                        <td class="specsValue">
+                                            Yes, Supports AAX, AIFF, WAV, HE-AAC, MP3, AAX+, AAC, VBR
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="specsKey">Video Player</td>
+                                        <td class="specsValue">
+                                            Yes, Supports H.264, MPEG4, PCM, AAC-LC, M4V, MOV, MJPEG, MP4, AVI, Full HD
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <table class="specTable table table-striped table-bordered" cellspacing="0">
+                                <tbody>
+                                    <tr>
+                                        <th class="groupHead" colspan="2">Other Features</th>
+                                    </tr>
+                                    <tr>
+                                        <td class="specsKey">Call Memory</td>
+                                        <td class="specsValue">
+                                            Yes
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="specsKey">SMS Memory</td>
+                                        <td class="specsValue">
+                                            Yes
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="specsKey">Phone Book Memory</td>
+                                        <td class="specsValue">
+                                            Yes
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="specsKey">Sensors</td>
+                                        <td class="specsValue">
+                                            Ambient Light Sensor, Proximity Sensor, Three-axis Gyro Sensor, Accelerometer, Fingerprint Identity Sensor, Barometer
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="specsKey">Additional Features</td>
+                                        <td class="specsValue">
+                                            Mobile Network, Multiple Languages and Characters Support, Built-in Speaker, Microphone, Lightning Connector, On / Off or Sleep / Wake, Calendar, Notes, Reminders, Clock, Calculator, Lightning Connector, Audio Calling, AirPlay Mirroring Photos, Audio and
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="specsKey">Important Apps</td>
+                                        <td class="specsValue">
+                                            Health, Face Time, Passbook, iTunes Store, App Store, iBooks, Game Center, Weather, Voice Memos, Stocks, News Stand, Podcasts, iMovie, Pages, Keynote, Numbers, iTunes U, Garage Band, Remote, Find My iPhone, Find My Friends, Air Drop, Air Play, Control Cen
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <table class="specTable table table-striped table-bordered" cellspacing="0">
+                                <tbody>
+                                    <tr>
+                                        <th class="groupHead" colspan="2">Warranty</th>
+                                    </tr>
+                                    <tr>
+                                        <td class="specsKey">Warranty Summary</td>
+                                        <td class="specsValue">
+                                            1 year manufacturer warranty for Phone and for in the box accessories
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</body>
+<script type="text/javascript">
+
+    function getData(ID) {
+
+        $('#views').empty();
+        $.ajax({
+            type: 'GET',
+            url: 'api/values/GetProductsDetails/' + ID,
+            async: true,
+            cache: false,
+            success: function (msg) {
+                PopulateProducts(msg);
+            },
+            error: function (a, b, c) {
+
+            }
+        });
+    }
+
+
+    function PopulateProducts(msg) {
+        $("#tblProductDetails").empty();
+        $.each(msg, function (i, obj) {
+            // var details = msg[i].Make + "<br/>" + msg[i].Model + "<br/>" + msg[i].Color + "<br/>" + msg[i].Specs + "<br/>";
+
+            $("#tblProductDetails").append(
+                "<tr>" +
+                    "<td colspan='2'><img class='image' src='" + msg[i].ImgPath + "' data-view-name='" + msg[i].ID + "'></img></td></tr>" +
+                    "<tr><td>Make</td><td>" + msg[i].Make + "</td></tr>" +
+                    "<tr><td>Model</td><td>" + msg[i].Model + "</td></tr>" +
+                    "<tr><td>Color</td><td>" + msg[i].Color + "</td></tr>" +
+                    "<tr><td>Specs</td><td>" + msg[i].Specs + "</td></tr>" +
+                    "<tr><td><a href='#'>" + msg[i].Description + "</a></td></tr>" +
+                     "<tr><td><input type='button'  value='Buy' class='btn btn-primary btn-lg' id='" + msg[i].ID + "'  data-view-name='" + msg[i].ID + "' title='Click here to buy'/>&nbsp;&bnbsp; <input type='button' value='Back' class='btnBack btn-primary btn-lg'/> </td><td>$639</td></tr>"
+             );
+        });
+    }
+
+    // Read a page's GET URL variables and return them as an associative array.
+    function getUrlVars() {
+        var vars = [], hash;
+        var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
+        for (var i = 0; i < hashes.length; i++) {
+            hash = hashes[i].split('=');
+            vars.push(hash[0]);
+            vars[hash[0]] = hash[1];
+        }
+        return vars;
+    }
+
+
+    $(document).ready(function () {
+
+        var ID = getUrlVars()["ID"];
+        var ID = getUrlVars()["ID"];
+        getData(ID);
+
+        $(document).on('click', '.btn', function () {
+            var ID = $(this).attr("data-view-name");
+
+            $.ajax({
+                type: "get",
+                url: "api/values/UpdatePurchased/" + ID,
+                success: function (msg) {
+
+                    alert("Thanks for shoping in vzw.com.");
+                    window.location.replace("home.html");
+
+                },
+                error: function (x, e) {
+                    /*   alert('Failed');
+                       alert(x.responseText);
+                       alert(x.status); */
+                }
+            });
+        });
+
+        $(document).on('click', '.btnback', function () {
+            window.location.replace("Products.html");
+
+        });
+
+
+
+
+
+    });
+
+
+</script>
+
+<script src="js/owl.carousel.js"></script>
+<script src="js/lightbox.min.js"></script>
+<script src="js/wow.min.js"></script>
+<script src="js/jquery.onepagenav.js"></script>
+<script src="js/core.js"></script>
+<script src="js/tooltip.js"></script>
+<script src="js/jquery.form-validator.js"></script>
+<script src="js/preloader.js"></script>
+<script src="js/main.js"></script>
+<script src="js/bootstrap.min.js"></script>
+</html>

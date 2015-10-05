@@ -1,0 +1,19 @@
+language: CSharp
+mono:
+  - latest
+install:
+  - curl -sSL https://raw.githubusercontent.com/aspnet/Home/dev/dnvminstall.sh | DNX_BRANCH=dev sh && source ~/.dnx/dnvm/dnvm.sh
+  - dnvm upgrade
+  - dnu restore
+script:
+  - cd src/WebApiSample/  && dnu build
+  - cd - && cd src/CFSampleWithAB.XUnit/ && dnu restore
+  - dnx test -parallel none && cd - && cd src/WebApiSample/
+deploy:
+     edge: true
+     provider: cloudfoundry
+     username: jasonrdonald@yahoo.co.in
+     password: Jason@1
+     api: https://api.run.pivotal.io
+     organization: Techavengers
+     space: development

@@ -1,0 +1,39 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{057B5807-019C-41C0-89A0-7F994A87D6F0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{745281AF-7C49-4AAE-970D-15C906BCB0FA}"
+	ProjectSection(SolutionItems) = preProject
+		global.json = global.json
+	EndProjectSection
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "WebApiSample", "src\WebApiSample\WebApiSample.xproj", "{78C4A409-F76C-4E48-B91F-B685A2DB0009}"
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "CFSampleWithAB.XUnit", "src\CFSampleWithAB.XUnit\CFSampleWithAB.XUnit.xproj", "{BCB44B33-622F-4A8D-BD45-89D1B247BB31}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{78C4A409-F76C-4E48-B91F-B685A2DB0009}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{78C4A409-F76C-4E48-B91F-B685A2DB0009}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{78C4A409-F76C-4E48-B91F-B685A2DB0009}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{78C4A409-F76C-4E48-B91F-B685A2DB0009}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BCB44B33-622F-4A8D-BD45-89D1B247BB31}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BCB44B33-622F-4A8D-BD45-89D1B247BB31}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BCB44B33-622F-4A8D-BD45-89D1B247BB31}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BCB44B33-622F-4A8D-BD45-89D1B247BB31}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{78C4A409-F76C-4E48-B91F-B685A2DB0009} = {057B5807-019C-41C0-89A0-7F994A87D6F0}
+		{BCB44B33-622F-4A8D-BD45-89D1B247BB31} = {057B5807-019C-41C0-89A0-7F994A87D6F0}
+	EndGlobalSection
+EndGlobal

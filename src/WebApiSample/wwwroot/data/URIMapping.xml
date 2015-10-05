@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Library>
+  <List>
+    <Make val="Apple">Apple</Make>
+    <Model val="I5">I Phone 5</Model>
+    <Color val="BK">Black</Color>
+    <Url>Products.html</Url>
+    <ImgPath>images/Facebook.jpg</ImgPath>
+  </List>
+  <List>
+    <Make val="Apple">Apple</Make>
+    <Model val="I5">I Phone 5</Model>
+    <Color val="GL">Gold</Color>
+    <Url>Products.html</Url>
+    <ImgPath>images/Twitter.jpg</ImgPath>
+  </List>
+</Library>

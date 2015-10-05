@@ -1,0 +1,20 @@
+﻿{
+  "version": "1.0.0-*",
+  "description": "CFSampleWithAB.XUnit Class Library",
+  "authors": [ "Administrator" ],
+  "tags": [ "" ],
+  "projectUrl": "",
+  "licenseUrl": "",
+  "dependencies": {
+    "xunit": "2.1.0",
+    "xunit.runner.dnx": "2.1.0-beta5a-build188",
+    "WebApiSample": "1.0.0-*"
+  },
+  "commands": {
+    "test": "xunit.runner.dnx"
+  },
+  "frameworks": {
+    "dnx451": { }
+
+  }
+}

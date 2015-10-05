@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Library>
+  <List>
+    <Make val="Apple">Apple</Make>
+    <Model val="I5">I Phone 5</Model>
+    <Color val="BK">Black</Color>
+    <Views>41</Views>
+  </List>
+  <List>
+    <Make val="Apple">Apple</Make>
+    <Model val="I5">I Phone 5</Model>
+    <Color val="GL">Gold</Color>
+    <Views>40</Views>
+  </List>
+  <List>
+    <Make val="Apple">Apple</Make>
+    <Model val="I5">I Phone 5</Model>
+    <Color val="WT">White</Color>
+    <Views>40</Views>
+  </List>
+  <List>
+    <Make>Apple</Make>
+    <Model>I Phone</Model>
+    <Views>5</Views>
+  </List>
+</Library>

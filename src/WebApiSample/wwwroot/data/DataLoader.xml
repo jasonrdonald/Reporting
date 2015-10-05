@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Library>
+  <List>
+    <Make val="Apple">Apple</Make>
+    <Model val="I5">I Phone 5</Model>
+    <Color val="BK">Black</Color>
+    <Specs>2 GB RAM</Specs>
+    <ImgPath>images/I6_Black.jpeg</ImgPath>
+  </List>
+  <List>
+    <Make val="Apple">Apple</Make>
+    <Model val="I5">I Phone 5</Model>
+    <Color val="GL">Gold</Color>
+    <Specs>2 GB RAM</Specs>
+    <ImgPath>images/I6_Gold.jpeg</ImgPath>
+  </List>
+  <List>
+    <Make val="Apple">Apple</Make>
+    <Model val="I5">I Phone 5</Model>
+    <Color val="WT">White</Color>
+    <Specs>2 GB RAM</Specs>
+    <ImgPath>images/I6_White.jpeg</ImgPath>
+  </List>
+</Library>

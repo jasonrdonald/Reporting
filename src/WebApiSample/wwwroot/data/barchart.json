@@ -1,0 +1,32 @@
+[
+  {
+    "adid":1,
+	"agegroup":1,
+	"Region":"CA",
+    "hits":10
+  }	,
+  {
+    "adid":2,
+	"agegroup":2,
+	"Region":"CA",
+    "hits":20
+  }	,
+  {
+    "adid":3,
+	"agegroup":3,
+	"Region":"CA",
+    "hits":120
+  }	,
+  {
+    "adid":2,
+	"agegroup":3,
+	"Region":"NY",
+    "hits":35
+  }	,
+  {
+    "adid":3,
+	"agegroup":2,
+	"Region":"FL",
+    "hits":25
+  }	
+]
